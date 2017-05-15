@@ -1,9 +1,6 @@
 var winner = (function () {
+
 	var randomComment;
-	var nameRender = document.querySelector('[data-winner="name"]');
-	var commentRender = document.querySelector('[data-winner="comment"]');
-	var linkRender = document.querySelector('[data-winner="profileLink"]');
-	var infoContainer = document.querySelectorAll('.winner__info');
 
 	function getWinnerComment(comments) {
 		console.log(comments.length);
@@ -12,16 +9,19 @@ var winner = (function () {
 	}
 
 	function renderWinner(comments) {
+		var nameRender = document.querySelector('[data-winner="name"]');
+		var commentRender = document.querySelector('[data-winner="comment"]');
+		var profileLink = document.querySelector('[data-winner="profileLink"]');
+		var infoContainer = document.querySelectorAll('.winner__info');
+
 		var winnerObj = comments[randomComment].snippet.topLevelComment.snippet;
 		console.log(winnerObj);
 		for (i=0;i<infoContainer.length;i++) {
 			infoContainer[i].classList.remove('hidden');
 		}
-
 		nameRender.textContent = winnerObj.authorDisplayName;
+		profileLink.href = winnerObj.authorChannelUrl;
 		commentRender.textContent = winnerObj.textOriginal;
-		linkRender.href = winnerObj.authorChannelUrl;
-		linkRender.textContent = 'Перейти в профиль победителя';
 	}
 
 	function init(comments) {

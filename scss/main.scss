@@ -1,7 +1,13 @@
 @import 'reset';
+@import 'vars';
 @import 'container/container';
+@import 'animations/animations';
+
 
 @import "winComment/winComment";
+@import "title/title";
+@import "video-info/video-info";
+@import "winner/winner";
 @import "search/search";
 @import "button/button";
 

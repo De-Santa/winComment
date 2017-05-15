@@ -13,20 +13,33 @@
 	</header>
 
 	<section class="winComment__video-search search container">
-		<p class="search__instruction">Скопируйте ID видео в данное поле и нажмите кнопку "Искать" <span>пример ID: https://www.youtube.com/watch?v=<b>vwEwhTEe1so</b></span></p>
-		<input class="search__input" type="text" placeholder="Введите ID видео" />
+		<p class="search__instruction title">Скопируйте ссылку на видео и нажмите кнопку "Искать" <br><span>Пример:<br>https://www.youtube.com/watch?v=vwEwhTEe1so<br>https://youtu.be/U47vs8RYbWA</span></p>
+		<input class="search__input" type="text" placeholder="Вставить ссылку" />
 		<div class="search__button button">Искать видео</div>
 	</section>
 
-	<section class="winComment__winner winner container">
-		<div class="winner__button button hidden">Выбрать победителя</div>
-		<p class="winner__info hidden" >Имя победителя: <span data-winner="name"></span></p>
-		<p class="winner__info hidden">Комментарий победителя: <span data-winner="comment"></span></p>
-		<a class="winner__info hidden" data-winner="profileLink" target="_blank"></a>
+	<section class="winComment__video-info video-info container hidden">
+		<p class="video-info__title title">Информация о видео:</p>
+		<div class="video-info__layout">
+			<template id="videoInfo">
+				<ul class="video-info__summary hidden">
+					<li class="video-info__summary-item">Название ролика: <span data-video="name"></span></li>
+					<li class="video-info__summary-item">Название канала: <span data-video="author"></span></li>
+					<li class="video-info__summary-item">Описание канала: <span data-video="descr"></span></li>
+				</ul>
+			</template>
+		</div>
 	</section>
 
+	<section class="winComment__winner winner container hidden">
+		<div class="winner__button button">Выбрать победителя</div>
+		<p class="winner__info hidden" >Имя победителя: <a class="winner__info hidden" data-winner="profileLink" target="_blank"><span data-winner="name"></span></a></p>
+		<p class="winner__info hidden">Комментарий победителя: <span data-winner="comment"></span></p>
+	</section>
 
+<script src="js/modules/svg-sprite.js"></script>
 <script src="js/modules/getComment.js"></script>
+<script src="js/modules/videoInfo.js"></script>
 <script src="js/modules/winner.js"></script>
 <script src="js/main.js"></script>
 </body>

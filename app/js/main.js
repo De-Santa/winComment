@@ -1,1 +1,2 @@
+svgSprite.init();
 getComment.init();

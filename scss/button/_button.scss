@@ -1,9 +1,14 @@
 .button {
-  width: 200px;
-  text-align: center;
-  line-height: 30px;
-  height: 30px;
-  background-color: rgba(red,0.5);
-  border: 2px ;
-  margin-bottom: 15px;
+	padding: 19px 30px;
+	min-width: 200px;
+	text-align: center;
+	background-color: $color-main-red;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+	text-transform: uppercase;
+	transition: background-color .3s ease-out;
+	&:hover {
+	  background-color: lighten($color-main-red,5);
+	}
 }

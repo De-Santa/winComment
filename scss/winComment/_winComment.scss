@@ -1,5 +1,15 @@
 .winComment {
   position: relative;
+  width: 100vw;
+  height: 100vh;
   padding-top: 30px;
   padding-bottom: 30px;
+  //background-image: url('/../img/bg.jpg');
+  //background-size: cover;
+  &__video-search {
+	margin-bottom: 30px;
+  }
+  &__video-info {
+	margin-bottom: 30px;
+  }
 }

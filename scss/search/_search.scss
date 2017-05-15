@@ -1,20 +1,36 @@
 .search {
   &__instruction {
-	margin-bottom: 5px;
-	font-weight: 600;
+	margin-bottom: 15px;
 	span {
-	  font-weight: 400;
-	  font-style: italic;
+		display: inline-block;
+		margin-top: 5px;
+		font-size: 15px;
+		font-weight: 400;
+		font-style: italic;
+		line-height: 1.2;
 	}
   }
 
   &__input {
-	width: 100%;
+	position: relative;
+	width: 50%;
+	padding: 15px 30px 15px 95px;
 	margin-bottom: 15px;
+	font-size: 20px;
+	border: none;
+	border-bottom: solid 3px rgba(#333,0.8);
+	background-image: url('/../img/tube.svg');
+	background-repeat: no-repeat;
+	background-position-x: 20px;
+	transition: border .3s ease-in-out;
+	&:focus {
+		border-bottom: solid 3px #19e21f;
+		outline: none;
+	}
   }
 
   &__button {
-	margin-left: auto;
-	margin-right: auto;
+	display: inline-block;
+	margin-left: -4px;
   }
 }
