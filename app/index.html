@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="winComment">
+
+	<header class="winComment__header main-header">
+	</header>
+
+	<section class="winComment__video-search search container">
+		<p class="search__instruction">Скопируйте ID видео в данное поле и нажмите кнопку "Искать" <span>пример ID: https://www.youtube.com/watch?v=<b>vwEwhTEe1so</b></span></p>
+		<input class="search__input" type="text" placeholder="Введите ID видео" />
+		<div class="search__button button">Искать видео</div>
+	</section>
+
+	<section class="winComment__winner winner container">
+		<div class="winner__button button hidden">Выбрать победителя</div>
+		<p class="winner__info hidden" >Имя победителя: <span data-winner="name"></span></p>
+		<p class="winner__info hidden">Комментарий победителя: <span data-winner="comment"></span></p>
+		<a class="winner__info hidden" data-winner="profileLink" target="_blank"></a>
+	</section>
+
+
+<script src="js/modules/getComment.js"></script>
+<script src="js/modules/winner.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

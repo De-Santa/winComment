@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'container/container';
+
+@import "winComment/winComment";
+@import "search/search";
+@import "button/button";
+
+//BOX-SIZING SETTINGS
+html {
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+b {
+  font-weight: bold;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+//TEMPLATE IE FALLBACK
+template {
+  display: none;
+}
